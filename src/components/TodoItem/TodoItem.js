@@ -1,8 +1,8 @@
-function TodoItem(task) {
+function TodoItem(props) {
     return (
         <li>
             <span>V</span>
-            <p>{task.description}</p>
+            <p>{props.text}</p>
             <span>X</span>
         </li>
     );
