@@ -41,7 +41,11 @@ function App() {
 
       <TodoList>
         {searchedTodos.map(todo => (
-          <TodoItem key={todo.text} text={todo.text} completed={todo.completed} />
+          <TodoItem 
+          key={todo.text}
+          text={todo.text}
+          completed={todo.completed}
+          onComplete={setTod}  />
         ))}
       </TodoList>
 
