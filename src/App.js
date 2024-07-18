@@ -5,15 +5,12 @@ import { TodoSearch } from './components/TodoSearch/TodoSearch';
 import { TodoList } from './components/TodoList/TodoList';
 import { CreateTodoButton } from './components/CreateTodoButton/CreateTodoButton';
 
-
 const defaultTodos = [
   { text: 'Cortar', completed: true },
   { text: 'Realizar curso', completed: false },
   { text: 'Llorar con la llorona', completed: false },
   { text: 'Eeeeeeeeeeeeeeeepa', completed: true }
 ];
-
-
 
 function App() {
   const [todos, setTodos] = React.useState(defaultTodos);
@@ -30,6 +27,24 @@ function App() {
     }
   );
 
+  const completeTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text === text
+    );
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
+    setTodos(newTodos);
+  };
+
+  const deleteTodo = (text) => {
+    const newTodos = [...todos];
+    const todoIndex = newTodos.findIndex(
+      (todo) => todo.text === text
+    );
+    newTodos.splice(todoIndex, 1);
+    setTodos(newTodos);
+  };
+
   return (
     <React.Fragment>
 
@@ -41,11 +56,13 @@ function App() {
 
       <TodoList>
         {searchedTodos.map(todo => (
-          <TodoItem 
-          key={todo.text}
-          text={todo.text}
-          completed={todo.completed}
-          onComplete={setTod}  />
+          <TodoItem
+            key={todo.text}
+            text={todo.text}
+            completed={todo.completed}
+            onComplete={() => completeTodo(todo.text)}
+            onDelete={() => deleteTodo(todo.text)}
+          />
         ))}
       </TodoList>
 
