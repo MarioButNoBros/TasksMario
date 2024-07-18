@@ -1,11 +1,12 @@
-import { FaCheck } from "react-icons/fa";
 import React from "react";
+import { TodoIcon } from "./../TodoIcon/TodoIcon"
 
-function CompleteIcon({ className, onClick }) {
+function CompleteIcon({ completed, onComplete }) {
     return (
-        <FaCheck
-            className={className}
-            onClick={onClick}
+        <TodoIcon
+            type="check"
+            color={completed ? "green" : "gray"}
+            onClick={onComplete}
         />
     )
 }

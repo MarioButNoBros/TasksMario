@@ -1,11 +1,12 @@
-import { ImCross } from "react-icons/im"; 
 import React from "react";
+import { TodoIcon } from "./../TodoIcon/TodoIcon"
 
-function DeleteIcon({ className, onClick }) {
+function DeleteIcon({onDelete}) {
     return (
-        <ImCross
-            className={className}
-            onClick={onClick}
+        <TodoIcon
+            type="delete"
+            color="gray"
+            onClick={onDelete}
         />
     )
 }
