@@ -28,8 +28,8 @@ function TodoProvider({ children }) {
 
     const addTodo = (text) => {
         const newTodos = [...todos];
-        newTodos.push({ 
-            text, 
+        newTodos.push({
+            text,
             completed: false,
         });
         saveTodos(newTodos);
