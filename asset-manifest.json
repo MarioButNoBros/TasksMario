@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TasksMario/static/css/main.6537b2c8.css",
+    "main.js": "/TasksMario/static/js/main.7c851840.js",
+    "index.html": "/TasksMario/index.html",
+    "static/media/delete.svg": "/TasksMario/static/media/delete.67697f56fd2f149bc9515a879062ad5c.svg",
+    "static/media/check.svg": "/TasksMario/static/media/check.23109d14544b9bb9b3d5d4e65ea13701.svg",
+    "main.6537b2c8.css.map": "/TasksMario/static/css/main.6537b2c8.css.map",
+    "main.7c851840.js.map": "/TasksMario/static/js/main.7c851840.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6537b2c8.css",
+    "static/js/main.7c851840.js"
+  ]
+}
